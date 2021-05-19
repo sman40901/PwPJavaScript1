@@ -1,0 +1,8 @@
+{
+    "title":"Please enter your information",
+    "body": [
+        {"field":"input","name":"fullName","type":"text","value":"Your full name"},
+        {"field":"input","name":"age","type":"text","value":"Your age"},
+        {"field":"input","name":"submit","type":"submit","value":"submit"}
+    ]
+}
