@@ -94,22 +94,28 @@ function buildForm(content) {
 }
 
 function btn1Click() {
-    // alert("btn1clicked")
-    // alert(document.getElementById('fullName').value);
-    // alert(document.getElementById('age').value);
-    // setCookie(
-    //     'FullName',
-    //     document.getElementById('fullName').value,
-    //     expInDays
-    // );
-    // setCookie(
-    //     'Age',
-    //     document.getElementById('age').value,
-    //     expInDays
-    // );
+
+    if (!vaildateForm()) return;
+
     saveData(document.getElementById('fullName').value,
         document.getElementById('age').value
     );
+}
+
+function vaildateForm() {
+    var fullName = document.getElementById('fullName').value;
+    // alert(fullName);
+    if (null == fullName || fullName.length == 0) {
+        alert('Full Name cannot be empty !!!');
+        return false;
+    }
+    var age = document.getElementById('age').value;
+    // alert(Number(age));
+    if (isNaN(Number(age))) {
+        alert('Age cannot be not a number !!!');
+        return false;
+    }
+    return true;
 }
 
 function uuidv4() {
@@ -171,7 +177,17 @@ function loadRecords() {
         var k = myStorage.key(i);
         item += '<li id="' + k + '">'
             + myStorage.getItem(k)
+            + '<button id="btn' + k + '" onClick="removeRecord(\'' + k + '\')">Remove</button>'
             + '</li>'
     }
     list1.innerHTML = item;
+}
+
+function removeRecord(recId) {
+    // alert(recId);
+    var record = "Are you sure you want to delete?  " + myStorage.getItem(recId);
+    if (confirm(record)) {
+        myStorage.removeItem(recId);
+        window.location("./records.html");
+    }
 }
