@@ -3,6 +3,9 @@
     "body": [
         {"field":"input","name":"fullName","type":"text","value":"Your full name"},
         {"field":"input","name":"age","type":"text","value":"Your age"},
-        {"field":"input","name":"submit","type":"submit","value":"submit"}
+        {"field":"input","name":"btn1","type":"button","value":"submit", 
+            "evts":[
+               {"evt":"onClick", "callThis":"btn1Click()"}
+            ]}
     ]
 }
