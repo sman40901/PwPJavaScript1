@@ -1,4 +1,5 @@
 {
+    "pgType":"userInputForm",
     "title":"Please enter your information",
     "body": [
         {"field":"input","name":"fullName","type":"text","value":"Your full name"},

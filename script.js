@@ -51,14 +51,34 @@ function btnClick(i) {
     // alert(JSON.stringify(a));
     //alert(a.title);
     // buildPage(a);
+    var td1 = document.getElementById('td' + i);
+    td1.setAttribute('class', "btn btn-success");
+    unClickOthers(i);
 }
 
+function unClickOthers(i) {
+    var j = 1;
+    var td1 = "some object";
+    while (td1 != null) {
+        // alert(td1);
+        // alert(j);
+        td1 = document.getElementById('td' + j);
+        if (i == j) {
+            j++;
+            continue;
+        }
+        td1.setAttribute('class', "btn btn-default");
+        j++;
+    }
+
+}
 
 function buildPage(content) {
-    document.getElementById('title').innerHTML = content.title;
-    if (typeof (content.body) == 'string') {
+    document.getElementById('title').innerHTML = '<h2>'+content.title+'</h2>';
+    if (content.pgType == 'plain') {
         document.getElementById('body').innerHTML = content.body;
-    } else {
+    }
+    if (content.pgType == 'userInputForm') {
         buildForm(content.body);
     }
 }
@@ -188,6 +208,8 @@ function removeRecord(recId) {
     var record = "Are you sure you want to delete?  " + myStorage.getItem(recId);
     if (confirm(record)) {
         myStorage.removeItem(recId);
-        window.location("./records.html");
+        window.location = "records.html";
+        // setTimeout('window.location="records.html";',1000);
     }
 }
+

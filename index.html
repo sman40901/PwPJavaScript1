@@ -9,44 +9,47 @@
     <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
     <!-- <script src='main.js'></script> -->
     <script src="https://d3js.org/d3.v4.min.js"></script>
-    <style src="style.css"></style>
+    <!-- <style src="style.css"></style> -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 
-<body>
+<body onload="btnClick(1)">
 
-
-    <div>
-        <table>
-            <tr>
-                <td>
-                    <table>
-                        <tr>
-                            <td id="1" onclick="btnClick(1)" class="menu">Home</td>
-                            <td>
-                        </tr>
-                        <tr>
-                            <td id="2" onclick="btnClick(2)" class="menu">Research</td>
-                        </tr>
-                        <tr>
-                            <td id="3" onclick="btnClick(3)" class="menu">Your details</td>
-                        </tr>
-                        <tr>
-                            <td class="menu"><a href="./records.html">Submitted Records</td>
-                        </tr>
-                    </table>
-                </td>
-                <td>
-                    <table>
-                        <tr>
-                            <td id="title"></td>
-                        </tr>
-                        <tr>
-                            <td id="body"></td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-        </table>
+    <div class="container">
+        <div class="jumbotron">
+            <table>
+                <tr>
+                    <td>
+                        <table width=100%>
+                            <tr>
+                                <td width=100% id="td1" onclick="btnClick(1)" class="btn btn-default">Home</td>
+                            </tr>
+                            <tr>
+                                <td width=100% id="td2" onclick="btnClick(2)" class="btn btn-default">Research</td>
+                            </tr>
+                            <tr>
+                                <td width=100% id="td3" onclick="btnClick(3)" class="btn btn-default">Your details</td>
+                            </tr>
+                            <tr>
+                                <td width=100% id='td4' class="btn btn-default"><a href="./records.html">Submitted
+                                        Records</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td align=top>
+                        <table align=top width=100%>
+                            <tr align=top>
+                                <td id="title" style="vertical-align:top" width=100%></td>
+                            </tr>
+                            <tr>
+                                <td id="body" width=100%></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
     </div>
     <script src="script.js"></script>
 
