@@ -1,39 +1,3 @@
-// import page1 from './resources/page1.json';
-// import page3 from './resources/page3.json';
-// import page2 from './resources/page2.json';
-
-// var resources= [
-//     {
-//         "title":"This is a home page",
-//         "body": "this is some body"
-//     },
-//     {
-//         "title":"This is a research page",
-//         "body": "this is some research"
-//     },
-//     {
-//         "title":"This is a form page",
-//         "body": [
-//             {"field":"Name","type":"text"},
-//             {"field":"age","type":"text"},
-//             {"field":"submit","type":"button"}
-//         ]
-//     }
-
-// ];
-
-// function readTextFile(file, callback) {
-//     var rawFile = new XMLHttpRequest();
-//     rawFile.overrideMimeType("application/json");
-//     rawFile.open("GET", file, true);
-//     rawFile.onreadystatechange = function() {
-//         if (rawFile.readyState === 4 && rawFile.status == "200") {
-//             callback(rawFile.responseText);
-//         }
-//     }
-//     rawFile.send(null);
-// }
-
 
 var expInDays = 5000;
 var myStorage = window.localStorage;
@@ -74,7 +38,7 @@ function unClickOthers(i) {
 }
 
 function buildPage(content) {
-    document.getElementById('title').innerHTML = '<h2>'+content.title+'</h2>';
+    document.getElementById('title').innerHTML = '<h2>' + content.title + '</h2>';
     if (content.pgType == 'plain') {
         document.getElementById('body').innerHTML = content.body;
     }
@@ -195,10 +159,12 @@ function loadRecords() {
     for (var i = 0; i < myStorage.length; i++) {
         // alert(myStorage.getItem(myStorage.key(i)));
         var k = myStorage.key(i);
-        item += '<li id="' + k + '">'
+        // var alternate = (i%2==0)? 'active' : 'bg-success text-white'
+        //item += '<tr id="' + k + '" class="'+ alternate +'"><td>'
+        item += '<tr id="' + k + '"><td>'
             + myStorage.getItem(k)
-            + '<button id="btn' + k + '" onClick="removeRecord(\'' + k + '\')">Remove</button>'
-            + '</li>'
+            + '</td><td><button id="btn' + k + '" onClick="removeRecord(\'' + k + '\')">Remove</button>'
+            + '</td></tr>'
     }
     list1.innerHTML = item;
 }

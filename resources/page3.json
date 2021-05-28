@@ -1,6 +1,6 @@
 {
     "pgType":"userInputForm",
-    "title":"Please enter your information",
+    "title":"Fans!!! Enter your information",
     "body": [
         {"field":"input","name":"fullName","type":"text","value":"Your full name"},
         {"field":"input","name":"age","type":"text","value":"Your age"},
