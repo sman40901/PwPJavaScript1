@@ -1,0 +1,41 @@
+{
+  "pgType": "gallery",
+  "title": "Superman Gallery, click on a image",
+  "body": [
+    {
+      "field": "img",
+      "src1": "http://1.bp.blogspot.com/-7bcKSiH_G7A/U3IysykCuDI/AAAAAAAAAv4/G0RTYojePxI/w1200-h630-p-k-no-nu/MetalloSilverAge.jpg",
+
+      "caption": "Metallo",
+      "evts": [{ "evt": "onClick", "callThis": "imgClick('{src}','{caption}')" }]
+    },
+    {
+      "field": "img",
+      "src1": "https://upload.wikimedia.org/wikipedia/en/3/35/Supermanflying.png",
+
+      "caption": "Superman",
+      "evts": [{ "evt": "onClick", "callThis": "imgClick('{src}','{caption}')" }]
+    },
+    {
+      "field": "img",
+      "src1": "https://i.pinimg.com/originals/c2/b0/6d/c2b06dfd17fdfebdccc6212a2d5a2f1c.jpg",
+
+      "caption": "Superman Green Lantern",
+      "evts": [{ "evt": "onClick", "callThis": "imgClick('{src}','{caption}')" }]
+    },
+    {
+      "field": "img",
+      "src1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtjvywZ1Ccj1g54uO-cZl_CQUs-hFd3CbdFQ&usqp=CAU",
+
+      "caption": "Martian ManHunter",
+      "evts": [{ "evt": "onClick", "callThis": "imgClick('{src}','{caption}')" }]
+    },
+    {
+      "field": "img",
+      "src1": "https://static3.srcdn.com/wordpress/wp-content/uploads/2020/03/Lex-Luthor-Comic-Superman-Armor.jpg",
+
+      "caption": "Luthor",
+      "evts": [{ "evt": "onClick", "callThis": "imgClick('{src}','{caption}')" }]
+    }
+  ]
+}
